@@ -1,25 +1,72 @@
-/* app css stylesheet */
-
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 10px;
 }
 
-.menu:before {
-  content: "[";
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
 }
 
-.menu:after {
-  content: "]";
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
 }
 
-.menu > li {
-  display: inline;
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
 }
 
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
+.navbar-default {
+	position: fixed;
+	width: 100%;
+}
+
+.navbar-header {
+	width: 100%;
+	text-align: center;
+}
+
+.navbar-brand {
+	float: none;
+}
+
+.burger-icon {
+	font-size:30px;
+	cursor:pointer;
+	float: left;
+}
+
+.source-container,
+.topic-container {
+	display: block;
+	padding: 2em;
+}
+
+.row {
+	-moz-column-width: 19em;
+	-webkit-column-width: 19em;
+	-moz-column-gap: 1em;
+	-webkit-column-gap: 1em;
+	margin-top: 70px;
+}
+
+.item {
+	display: inline-block;
+	width: 100%;
 }
