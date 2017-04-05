@@ -80,13 +80,18 @@
 .well {
     padding: 0px;
     border-radius: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 
 .image {
-  display: block;
-  width: 100%;
-  height: auto;
+    display: block;
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
 }
 
 .overlay {
@@ -107,13 +112,13 @@
 }
 
 .headline-text {
-  white-space: nowrap; 
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  overflow: hidden;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+  color: #f3f3f3;
+  padding: 1em;
+  text-align: center;
+  font-size: 18px;
+}
+
+.summary {
+    color: #bfbfbf;
+    padding: 1em;
 }
