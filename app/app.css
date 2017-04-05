@@ -94,7 +94,7 @@
     flex-shrink: 0;
     min-width: 100%;
     height: 100%;
-    opacity: 0.8; 
+    opacity: 0.8;
 }
 
 .overlay {
@@ -124,4 +124,8 @@
 .summary {
     color: #bfbfbf;
     padding: 1em;
+}
+
+.tag-clound {
+  list-style: none;
 }
