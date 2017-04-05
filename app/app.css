@@ -5,6 +5,7 @@
     z-index: 1;
     top: 0;
     left: 0;
+    color: gray;
     background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
@@ -126,6 +127,16 @@
     padding: 1em;
 }
 
-.tag-clound {
+.tag-cloud {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tag-cloud li {
+  list-style: none;
+}
+
+.tag-cloud li label {
+  margin-left: 3px;
 }
