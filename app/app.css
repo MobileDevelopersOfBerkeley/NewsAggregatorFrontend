@@ -15,7 +15,7 @@
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #bb4810;
     display: block;
     transition: 0.3s
 }
@@ -33,23 +33,28 @@
 }
 
 .navbar-default {
-	position: fixed;
 	width: 100%;
+    background-color: #bb4810;
 }
 
 .navbar-header {
 	width: 100%;
 	text-align: center;
+    padding: 5px;
 }
 
-.navbar-brand {
-	float: none;
+.app-title {
+    color: #fff !important;
+    line-height: 40px;
+    font-size: 20px;
 }
 
 .burger-icon {
 	font-size:30px;
 	cursor:pointer;
 	float: left;
+    color: #fff;
+    margin-left: 5px;
 }
 
 .source-container,
@@ -70,6 +75,11 @@
 	display: inline-block;
 	width: 100%;
     position: relative;
+}
+
+.well {
+    padding: 0px;
+    border-radius: 0px;
 }
 
 
