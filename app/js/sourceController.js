@@ -17,5 +17,5 @@ controller('sourceController', function($scope, $rootScope) {
 		   }
   	}
     $rootScope.updateArticles($scope.sources);
-  };
+		}
 });
