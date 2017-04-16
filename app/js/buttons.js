@@ -14,5 +14,4 @@ $(document).ready(function () {
         $(this).find('#remove').removeClass('showRemoveBtn');  
         $(this).find('#remove').addClass('hideRemoveBtn');  
     });
-
 });

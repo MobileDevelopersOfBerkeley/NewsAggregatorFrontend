@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>DECK</title>
+    <title>NEWSNOW</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link data-require="bootstrap-css@*" data-semver="3.0.0" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/menu.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">  
+    <link rel="stylesheet" type="text/css" href="about/about.css">
     <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
   </head>
 
@@ -23,7 +24,7 @@
       <div class="o-container">
           <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="navbar-header">
-          <a class="app-title" href="#">DECK</a>
+          <a class="app-title" href="#">NEWSNOW</a>
           <span id="c-button--push-left" class="burger-icon">&#9776;</span>
         </div>
       </nav>
@@ -34,11 +35,11 @@
 
   <nav id="c-menu--push-left" class="sidenav c-menu c-menu--push-left">
     <div class="top-sidenav">
-      <span class="logo">DECK</span>
+      <span class="logo">NEWSNOW</span>
       <button class="c-menu__close">&times;</button>
     </div>
 
-    <div class="source-container">
+    <div class="source-container" ng-controller="sourceController">
       <span class="filter-title">SOURCES</span>
       <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
@@ -46,15 +47,11 @@
         </div>
       </form>
       <ul class="tag-cloud" style="list-style:none;">
-        <li id="pill"><span id="remove" class="hideRemoveBtn">&#10005;</span>BBC</li>
-        <li id="pill"><span id="remove" class="hideRemoveBtn">&#10005;</span>CNN</li>
-        <li id="pill"><span id="remove" class="hideRemoveBtn">&#10005;</span>New York Times</li>
-        <li id="pill"><span id="remove" class="hideRemoveBtn">&#10005;</span>Time</li>
-        <li id="pill"><span id="remove" class="hideRemoveBtn">&#10005;</span>Washington Post</li>
+        <li ng-repeat="source in sources" id="pill"><span id="remove" class="hideRemoveBtn">&#10005;</span>{{source}}</li>
       </ul>
     </div>
 
-    <div class="topic-container">
+    <div class="topic-container" ng-controller="topicController">
       <span class="filter-title">TOPICS</span>
       <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
@@ -62,17 +59,7 @@
         </div>
       </form>
       <ul class="tag-cloud">
-        <li id="pill">
-          <span id="remove" class="hideRemoveBtn">&#10005;</span>
-          Politics
-        </li>
-        <li id="pill">
-          <span id="remove" class="hideRemoveBtn">&#10005;</span>
-          Sports
-        </li>
-        <li id="pill"><span id="remove" class="hideRemoveBtn">&#10005;</span>US News</li>
-        <li id="pill"><span id="remove" class="hideRemoveBtn">&#10005;</span>World News</li>
-        <li id="pill"><span id="remove" class="hideRemoveBtn">&#10005;</span>Culture</li>
+        <li ng-repeat="topic in topics" id="pill"><span id="remove" class="hideRemoveBtn">&#10005;</span>{{topic}}</li>
       </ul>
     </div>
 
@@ -89,6 +76,10 @@
   <script src="js/app.js"></script>
   <script src="js/menu.js"></script>
   <script src="js/buttons.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/articleController.js"></script>
+  <script src="js/sourceController.js"></script>
+  <script src="js/topicController.js"></script>
   <script src="home/home.js"></script>
   <script src="about/about.js"></script>
   <script src="components/version/version.js"></script>

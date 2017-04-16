@@ -1,0 +1,117 @@
+.aboutTitle{
+	background-color: transparent;
+	position: relative;
+	font-size: 50px;
+	text-align: center;
+	color: white;
+	margin-top: 80px;
+}
+
+.aboutNewsNow {
+	font-size: 20px;
+	color: white;
+	width: 80%;
+	position: relative;
+	text-align: center;
+	left: 50%;
+	transform:TranslateX(-50%);
+
+}
+.item1 {
+	margin-top: 30px;
+	display: inline-block;
+	width: 24%;
+	height: 300px;
+    position: relative;
+}
+
+.well1 {
+    padding: 0px;
+    border-radius: 0px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.item2 {
+	margin-top: 30px;
+	display: inline-block;
+	width: 15%;
+	height: 15%;
+    position: relative;
+}
+
+.well2 {
+    padding: 0px;
+    border-radius: 0px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.newRow {
+	position: relative;
+	margin-top: 0px;
+	margin-bottom: 80px;
+}
+
+.newsPic {
+	opacity: 0.8;
+	overflow: hidden;
+	height: 400px;
+	left: 0px;
+	background-color: transparent;
+	position: absolute;
+	margin-top: 0px;
+}
+
+.newsPic2 {
+	height: 400px;
+	left: 60%;
+	width: 400px;
+	background-color: transparent;
+	position: relative;
+	margin-top: 0px;
+}
+
+.newsPic3 {
+	height: 400px;
+	left: 0%;
+	width: 400px;
+	background-color: transparent;
+	position: relative;
+	margin-top: 0px;
+}
+
+.introduction {
+	width: 100%;
+	left: 0px;
+	background-color: transparent;
+	position: relative;
+	margin-top: 100px;
+}
+
+
+.newsPicOverlay {
+	height: 400px;
+	position: absolute;
+	background-color: black;
+	width: 100%;
+	left: 0;
+	opacity: 0.4;
+}
+
+.summary2 {
+	color:black;
+	top: 44%;
+	background-color: transparent;
+	width:60%;
+	position: absolute;
+}
+
+.summary3 {
+	color:black;
+	top: 18%;
+	left: 40%;
+	background-color: transparent;
+	width:60%;
+	position: absolute;
+}

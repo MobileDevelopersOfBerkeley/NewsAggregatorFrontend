@@ -1,107 +1,21 @@
-<div class="container">
+<div class="container" ng-controller="articleController">
 	<div class="row">
-		<a href="http://www.bbc.com/news/world-asia-39507350">
-			<div class="item well">
-				<div class="img-container"><img src="https://ichef-1.bbci.co.uk/news/624/cpsprodpb/5C23/production/_95478532_61a10a58-11bd-4cb3-a5f1-a0cbd3c19c12.jpg" alt="Title" class="image"></div>
-				<div class="overlay">
-					<div class="headline-text">Aung San Suu Kyi: No ethnic cleansing of Myanmar Muslim minority</div>
-					<div class="summary">Aung San Suu Kyi has denied there is ethnic cleansing of the Muslim minority in Myanmar - despite widespread reports of abuses. "I don't think there is ethnic cleansing going on. I think ethnic cleansing is too strong an expression to use for what is happening," she told the BBC's special correspondent Fergal Keane.</div>
-					<div class="bottom-summary">
-						<div class="source">BBC</div>
-						<span class="see-more">See More  &#8594;</span>
+		<div class="articles-container" ng-repeat="article in articles">
+			<a class="article-link" target="_blank" href={{article.url}}>
+				<div id="test" class="item well popularity-{{article.popularity}}">
+  				<div class="img-container">
+              <img src={{article.urlToImage}} alt={{article.title}} class="image">
+          </div>
+					<div class="overlay">
+						<div class="headline-text">{{article.title}}</div>
+						<div class="summary ">{{article.description}}</div>
+						<div class="bottom-summary">
+							<div class="source">{{article.source}}</div>
+							<span class="see-more">See More  &#8594;</span>
+						</div>
 					</div>
 				</div>
-			</div>
-		</a>
-		<a href="http://www.bbc.com/news/world-us-canada-39508351">
-			<div class="item well">
-				<div class="img-container"><img src="https://ichef.bbci.co.uk/news/660/cpsprodpb/74B5/production/_95477892_hi038538075.jpg" alt="Title" class="image"></div>
-				<div class="overlay">
-					<div class="headline-text">Steve Bannon loses National Security Council seat</div>
-					<div class="summary">The aide said Mr Bannon was only given a seat on the NSC to keep an eye on National Security Adviser Michael Flynn, who was fired in February. Was Mr Bannon really just there to "De-operationalise" the council after the Obama years or, even more improbably, keep an eye on former National Security Adviser Michael Flynn? In January, White House Press Secretary Sean Spicer vigorously asserted that Mr Bannon's presence on the council was nothing out of the ordinary.</div>
-					<div class="source">BBC</div>
-				</div>
-			</div>
-		</a>
-		<a href="http://www.bbc.com/news/world-europe-39505692">
-			<div class="item well">
-				<div class="img-container"><img src="https://ichef.bbci.co.uk/news/660/cpsprodpb/CFC3/production/_95478135_hands4.jpg" alt="Title" class="image"></div>
-				<div class="overlay">
-					<div class="headline-text">Dutch men hold hands to protest against homophobia</div>
-					<div class="summary">Their story was widely publicised and they appeared on Dutch talk show Pauw earlier this week, where they described being set upon after holding hands. In some parts of the world, including India and some African countries, men commonly hold hands, taking it as a sign of friendship and respect.</div>
-					<div class="source">BBC</div>
-				</div>
-			</div>
-		</a>
-		<a href="http://www.bbc.com/news/uk-england-london-39496321">
-			<div class="item well">
-				<div class="img-container"><img src="https://ichef.bbci.co.uk/news/624/cpsprodpb/123E6/production/_95462747_mediaitem95462746.jpg" alt="Title" class="image"></div>
-				<div class="overlay">
-					<div class="headline-text">Are driverless pods the future for world cities?</div>
-					<div class="summary">I've just spent a fascinating morning, being taken around North Greenwich in a driverless pod. Big things are expected from this project with paying customers using the pods by 2019.</div>
-					<div class="source">BBC</div>
-				</div>
-			</div>
-		</a>
-		<a href="http://money.cnn.com/2017/04/05/media/pepsi-pulls-kendall-jenner-ad/">
-			<div class="item well">
-				<div class="img-container"><img src="http://i2.cdn.cnn.com/cnnnext/dam/assets/170405102536-baton-rouge-blm-jenner-pepsi-ad-split-restricted-large-tease.jpg" alt="Title" class="image"></div>
-				<div class="overlay">
-					<div class="headline-text">Pepsi pulls controversial Kendall Jenner ad</div>
-					<div class="summary">Pepsi also apologized to Jenner herself for putting her "In this position." The ad, in which Jenner participates in a photo shoot before joining a group of protesters and offering a Pepsi to a stoic police officer, was accused of appropriating the Black Lives Matter movement and using social justice to sell soda.</div>
-					<div class="source">CNN</div>
-				</div>
-			</div>
-		</a>
-		<a href="http://www.cnn.com/2017/04/05/politics/donald-trump-assad-syria-north-korea/">
-			<div class="item well">
-				<div class="img-container"><img src="http://i2.cdn.cnn.com/cnnnext/dam/assets/170405142913-foreign-policy-trump-assad-kim-large-tease.jpg" alt="Title" class="image"></div>
-				<div class="overlay">
-					<div class="headline-text">Sobering world crises land on Trump's doorstep</div>
-					<div class="summary">The Trump administration has mustered the display of outrage that many world partners were seeking, including convening an emergency session at the United Nations Security Council, chaired by US Ambassador Nikki Haley. North Korea's test launch provided another reminder to Trump of the volatile world he inherited in January.</div>
-					<div class="source">CNN</div>
-				</div>
-			</div>
-		</a>
-		<a href="https://www.washingtonpost.com/world/national-security/at-un-trump-administration-assails-russia-for-protecting-assad/2017/04/05/28179558-1a0c-11e7-bcc2-7d1a0973e7b2_story.html?utm_term=.d9c59fb18a22">
-			<div class="item well">
-				<div class="img-container"><img src="https://img.washingtonpost.com/rf/image_606w/2010-2019/WashingtonPost/2017/04/05/Foreign/Images/AFP_N8995.jpg" alt="Title" class="image"></div>
-				<div class="overlay">
-					<div class="headline-text">Trump condemns chemical attack as his U.N. ambassador assails Russia’s role</div>
-					<div class="summary">A chemical attack in Syria that killed scores of civilians, including children, "Crossed a lot of lines for me," President Trump said Wednesday, adding that he is now responsible for trying to end a grinding conflict he blamed his predecessor for prolonging. Unlike his U.N. envoy, Trump did not mention Russia and its culpability for backing Syrian President Bashar al-Assad, whose government blamed the chemical release on rebel forces.</div>
-					<div class="source">Washington Post</div>
-				</div>
-			</div>
-		</a>
-		<a href="http://time.com/4727921/rex-tillerson-bashar-assad-syria-chemical-attack/?xid=homepage">
-			<div class="item well">
-				<div class="img-container"><img src="https://timedotcom.files.wordpress.com/2017/04/rex-tillerson1.jpg?quality=85&w=642&h=428&crop=1" alt="Title" class="image"></div>
-				<div class="overlay">
-					<div class="headline-text">U.S. Blames Assad for Attack</div>
-					<div class="summary">Secretary of State Rex Tillerson says there's "no doubt in our mind" that the Syrian government under President Bashar Assad's leadership is responsible for what he's calling a "horrific attack." Tillerson commented during a brief photo op with visiting Mexican Foreign Secretary Luis Videgaray.</div>
-					<div class="source">Time</div>
-				</div>
-			</div>
-		</a>
-		<a href="https://www.nytimes.com/2017/04/05/us/california-today-worries-over-deportation.html">
-			<div class="item well">
-				<div class="img-container"><img src="https://static01.nyt.com/images/2017/04/05/us/05California-Today-immig/05California-Today-immig-master768.jpg" alt="Title" class="image"></div>
-				<div class="overlay">
-					<div class="headline-text">California Today: Worries Over Deportation</div>
-					<div class="summary">The city's total solar photovoltaic energy capacity, including both public and private installations, rose 60 percent to more than 300 megawatts, according to a new survey by Environment California, an advocacy organization. In all, six California cities earned places in the group's ranking of the top 20 solar cities.</div>
-					<div class="source">New York Times</div>
-				</div>
-			</div>
-		</a>
-		<a href="https://www.nytimes.com/2017/04/05/technology/personaltech/vpn-internet-security.html">
-			<div class="item well">
-				<div class="img-container"><img src="https://static01.nyt.com/images/2017/04/05/business/06techfix1/06techfix1-master768.jpg" alt="Title" class="image"></div>
-				<div class="overlay">
-					<div class="headline-text">For Internet Privacy, VPNs Are an Imperfect Shield</div>
-					<div class="summary">PNs help cloak your browsing information from your internet provider. Which VPNs are worth a try? There are hundreds of VPNs on the market, and vetting them can be overwhelming.</div>
-					<div class="source">New York Times</div>
-				</div>
-			</div>
-		</a>
+			</a>
+		</div>
 	</div>
 </div>

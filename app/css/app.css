@@ -107,6 +107,31 @@ body {
     overflow: hidden;
 }
 
+.popularity-1,
+.popularity-2 {
+  height: 250px;
+}
+
+.popularity-3,
+.popularity-4 {
+  height: 300px;
+}
+
+.popularity-5,
+.popularity-6 {
+  height: 350px;
+}
+
+.popularity-7,
+.popularity-8 {
+  height: 400px;
+}
+
+.popularity-9,
+.popularity-10 {
+  height: 500px;
+}
+
 .img-container {
     background-color: #000;
 }
@@ -126,8 +151,8 @@ body {
   right: 0;
   background-color: rgba(0, 0, 0, 0.75);
   width: 100%;
-  height: 25%;
-  transition: 1s ease;
+  height: 30%;
+  transition: 0.5s ease;
   overflow: hidden;
 
 }
@@ -140,7 +165,7 @@ body {
   color: #f3f3f3;
   padding: 1em;
   text-align: center;
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 400;
 }
 
@@ -148,8 +173,16 @@ body {
     color: #bfbfbf;
     padding: 1em;
     font-weight: 300;
+    height: 20%;
+    display: block;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    text-overflow: -o-ellipsis-lastline;
 }
 
+.bottom-summary {
+  height: 20%;
+}
 .filter-title {
   font-weight: 400;
   font-size: 15px;
