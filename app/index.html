@@ -42,7 +42,7 @@
     <div class="source-container" ng-controller="sourceController">
       <span class="filter-title">SOURCES</span>
       <ul class="tag-cloud" style="list-style:none;">
-        <li ng-repeat="source in sources" id="pill"><span id="remove" class="hideRemoveBtn">&#10005;</span>{{source}}</li>
+        <li ng-repeat="source in allSources" id="pill" ng-click="toggleSource(source)"><span id="remove" class="hideRemoveBtn">&#10005;</span>{{source}}</li>
       </ul>
     </div>
 
