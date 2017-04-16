@@ -27,6 +27,5 @@ function post(url, params, callback) {
         callback(response);
     }
   };
-
-  req.send(params);
+  req.send(param_str);
 }
