@@ -1,10 +1,11 @@
 $(document).ready(function () {
     $('.tag-cloud').on('click', '#pill', function () {
-        $(this).remove();   
+        $(this).toggleClass('pill-faded');   
     });
 
     $('.tag-cloud').on('mouseenter', '#pill', function () {
         $(this).addClass('pill-hover');
+        $(this).find('#remove').removeClass('pill-faded');  
         $(this).find('#remove').removeClass('hideRemoveBtn');  
         $(this).find('#remove').addClass('showRemoveBtn');  
     });

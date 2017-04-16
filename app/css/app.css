@@ -1,6 +1,7 @@
 body {
   font-family: 'Source Sans Pro', sans-serif;
 }
+
 .sidenav {
     height: 100%;
     width: 0;
@@ -110,27 +111,27 @@ body {
 
 .popularity-1,
 .popularity-2 {
-  height: 250px;
+  height: 210px;
 }
 
 .popularity-3,
 .popularity-4 {
-  height: 300px;
+  height: 230px;
 }
 
 .popularity-5,
 .popularity-6 {
-  height: 350px;
+  height: 270px;
 }
 
 .popularity-7,
 .popularity-8 {
-  height: 400px;
+  height: 370px;
 }
 
 .popularity-9,
 .popularity-10 {
-  height: 500px;
+  height: 520px;
 }
 
 .img-container {
@@ -189,7 +190,7 @@ body {
   color: #bfbfbf;
   padding: 1em;
   font-weight: 300;
-  height: 40%;
+  height: 30%;
   overflow: hidden;
   visibility: hidden;
   opacity: 0;
@@ -221,13 +222,14 @@ input[type="checkbox"] {
 
 ul {
   padding-left: 10px;
+  padding-top: 20px;
 }
 
 li {
   display: inline-block;
   border: 2px solid #a1a1a1;
   padding: 5px 12px;
-  background: #616161;
+  background: #828080;
   border-radius: 25px;
   margin: 4px;
   font-size: 10px;
@@ -240,6 +242,12 @@ li {
 .pill-hover {
   background: #a1a1a1;
   color: #000; 
+}
+
+.pill-faded {
+  border: none;
+  background: #2d2d2d;
+  color: #6d6a6a;
 }
 
 .top-sidenav {

@@ -4,11 +4,14 @@ controller('articleController', function($scope, $rootScope) {
       function(articles) {
         $scope.$apply(function() {
             $scope.articles = articles.slice(0, 30);
-            console.log(articles);
         });
   });
 
   $rootScope.updateArticles = function(sources) {
-    return 0;
+    post(apiServerUrl + "getArticlesBySources", {"sources" : JSON.stringify(sources)}, function(articles) {
+      $scope.$apply(function() {
+        $scope.articles = articles.slice(0, 30);
+      });
+    });
   }
 });

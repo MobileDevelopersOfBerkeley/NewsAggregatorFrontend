@@ -41,13 +41,8 @@
 
     <div class="source-container" ng-controller="sourceController">
       <span class="filter-title">SOURCES</span>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search Sources">
-        </div>
-      </form>
       <ul class="tag-cloud" style="list-style:none;">
-        <li ng-repeat="source in sources" id="pill"><span id="remove" class="hideRemoveBtn">&#10005;</span>{{source}}</li>
+        <li ng-repeat="source in allSources" id="pill" ng-click="toggleSource(source)"><span id="remove" class="hideRemoveBtn">&#10005;</span>{{source}}</li>
       </ul>
     </div>
 
