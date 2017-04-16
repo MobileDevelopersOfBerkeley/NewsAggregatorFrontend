@@ -180,6 +180,15 @@ li {
   font-size: 10px;
 }
 
+#pill:hover {
+  cursor: pointer;
+}
+
+.pill-hover {
+  background: #a1a1a1;
+  color: #000; 
+}
+
 .top-sidenav {
   display: inline-block;
   width: 100%;
@@ -212,3 +221,15 @@ li {
 
 .see-more:hover {
   text-decoration: underline;
+}
+
+.hideRemoveBtn {
+  display: none;
+  padding: 2px;
+}
+
+.showRemoveBtn {
+  display: inline-block;
+  padding: 0px 2px;
+}
+

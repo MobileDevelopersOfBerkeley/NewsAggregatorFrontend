@@ -46,11 +46,11 @@
         </div>
       </form>
       <ul class="tag-cloud" style="list-style:none;">
-        <li><input type="checkbox" checked id="bbc"><label for="bbc">BBC</label></li>
-        <li><input type="checkbox" checked id="cnn"><label for="cnn">CNN</label></li>
-        <li><input type="checkbox" checked id="nyt"><label for="nyt">New York Times</label></li>
-        <li><input type="checkbox" checked id="time"><label for="time">Time</label></li>
-        <li><input type="checkbox" checked id="wapo"><label for="wapo">Washington Post</label></li>
+        <li id="pill"><span id="remove" class="hideRemoveBtn">&#10005;</span>BBC</li>
+        <li id="pill"><span id="remove" class="hideRemoveBtn">&#10005;</span>CNN</li>
+        <li id="pill"><span id="remove" class="hideRemoveBtn">&#10005;</span>New York Times</li>
+        <li id="pill"><span id="remove" class="hideRemoveBtn">&#10005;</span>Time</li>
+        <li id="pill"><span id="remove" class="hideRemoveBtn">&#10005;</span>Washington Post</li>
       </ul>
     </div>
 
@@ -62,11 +62,17 @@
         </div>
       </form>
       <ul class="tag-cloud">
-        <li><input type="checkbox" checked id="politics"><label for="politics">Politics</label></li>
-        <li><input type="checkbox" checked id="sports"><label for="sports">Sports</label></li>
-        <li><input type="checkbox" checked id="us_news"><label for="us_news">US News</label></li>
-        <li><input type="checkbox" checked id="world_news"><label for="world_news">World News</label></li>
-        <li><input type="checkbox" checked id="culture"><label for="culture">Culture</label></li>
+        <li id="pill">
+          <span id="remove" class="hideRemoveBtn">&#10005;</span>
+          Politics
+        </li>
+        <li id="pill">
+          <span id="remove" class="hideRemoveBtn">&#10005;</span>
+          Sports
+        </li>
+        <li id="pill"><span id="remove" class="hideRemoveBtn">&#10005;</span>US News</li>
+        <li id="pill"><span id="remove" class="hideRemoveBtn">&#10005;</span>World News</li>
+        <li id="pill"><span id="remove" class="hideRemoveBtn">&#10005;</span>Culture</li>
       </ul>
     </div>
 
@@ -77,10 +83,12 @@
   <div id="c-mask" class="c-mask"></div>
 
   <!-- Script Files -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="js/app.js"></script>
   <script src="js/menu.js"></script>
+  <script src="js/buttons.js"></script>
   <script src="home/home.js"></script>
   <script src="about/about.js"></script>
   <script src="components/version/version.js"></script>
@@ -102,6 +110,7 @@
       e.preventDefault;
       pushLeft.open();
     });
+
   </script>
 
 </body>
