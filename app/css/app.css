@@ -1,6 +1,7 @@
 body {
   font-family: 'Source Sans Pro', sans-serif;
 }
+
 .sidenav {
     height: 100%;
     width: 0;
@@ -221,13 +222,14 @@ input[type="checkbox"] {
 
 ul {
   padding-left: 10px;
+  padding-top: 20px;
 }
 
 li {
   display: inline-block;
   border: 2px solid #a1a1a1;
   padding: 5px 12px;
-  background: #616161;
+  background: #828080;
   border-radius: 25px;
   margin: 4px;
   font-size: 10px;
@@ -240,6 +242,12 @@ li {
 .pill-hover {
   background: #a1a1a1;
   color: #000; 
+}
+
+.pill-faded {
+  border: none;
+  background: #2d2d2d;
+  color: #6d6a6a;
 }
 
 .top-sidenav {
