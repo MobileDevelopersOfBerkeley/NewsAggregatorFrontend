@@ -1,4 +1,8 @@
 angular.module('myApp.controllers.sourceController', []).
 controller('sourceController', function($scope) {
-    $scope.sources = ["stuff1", "stuff2", "stuff3" ];
+  post(apiServerUrl + "getAllSources", {}, function(sources) {
+    $scope.$apply(function() {
+      $scope.sources = sources;
+    });
+  });
 });

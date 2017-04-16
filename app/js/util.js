@@ -1,6 +1,8 @@
 // Util functions for JavaScript code
 "use strict";
 
+var apiServerUrl = "https://newsnowapi.herokuapp.com/";
+
 /* Sends a post request to url using params.
  *
  * :param str url: Where to send the post request.
