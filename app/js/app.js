@@ -2,6 +2,7 @@
 
 // Declare app level module which depends on views, and components
 var app = angular.module('myApp', [
+  'myApp.controllers',
   'ngRoute',
   'myApp.home',
   'myApp.about',

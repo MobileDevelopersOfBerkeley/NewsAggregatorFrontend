@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>DECK</title>
+    <title>NEWSNOW</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link data-require="bootstrap-css@*" data-semver="3.0.0" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/menu.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="about/about.css">
     <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
   </head>
 
@@ -23,7 +24,7 @@
       <div class="o-container">
           <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="navbar-header">
-          <a class="app-title" href="#">DECK</a>
+          <a class="app-title" href="#">NEWSNOW</a>
           <span id="c-button--push-left" class="burger-icon">&#9776;</span>
         </div>
       </nav>
@@ -34,11 +35,11 @@
 
   <nav id="c-menu--push-left" class="sidenav c-menu c-menu--push-left">
     <div class="top-sidenav">
-      <span class="logo">DECK</span>
+      <span class="logo">NEWSNOW</span>
       <button class="c-menu__close">&times;</button>
     </div>
 
-    <div class="source-container">
+    <div class="source-container" ng-controller="sourceController">
       <span class="filter-title">SOURCES</span>
       <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
@@ -46,15 +47,11 @@
         </div>
       </form>
       <ul class="tag-cloud" style="list-style:none;">
-        <li><input type="checkbox" checked id="bbc"><label for="bbc">BBC</label></li>
-        <li><input type="checkbox" checked id="cnn"><label for="cnn">CNN</label></li>
-        <li><input type="checkbox" checked id="nyt"><label for="nyt">New York Times</label></li>
-        <li><input type="checkbox" checked id="time"><label for="time">Time</label></li>
-        <li><input type="checkbox" checked id="wapo"><label for="wapo">Washington Post</label></li>
+        <li ng-repeat="source in sources" id="pill"><span id="remove" class="hideRemoveBtn">&#10005;</span>{{source}}</li>
       </ul>
     </div>
 
-    <div class="topic-container">
+    <div class="topic-container" ng-controller="topicController">
       <span class="filter-title">TOPICS</span>
       <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
@@ -62,11 +59,7 @@
         </div>
       </form>
       <ul class="tag-cloud">
-        <li><input type="checkbox" checked id="politics"><label for="politics">Politics</label></li>
-        <li><input type="checkbox" checked id="sports"><label for="sports">Sports</label></li>
-        <li><input type="checkbox" checked id="us_news"><label for="us_news">US News</label></li>
-        <li><input type="checkbox" checked id="world_news"><label for="world_news">World News</label></li>
-        <li><input type="checkbox" checked id="culture"><label for="culture">Culture</label></li>
+        <li ng-repeat="topic in topics" id="pill"><span id="remove" class="hideRemoveBtn">&#10005;</span>{{topic}}</li>
       </ul>
     </div>
 
@@ -77,10 +70,16 @@
   <div id="c-mask" class="c-mask"></div>
 
   <!-- Script Files -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="js/app.js"></script>
   <script src="js/menu.js"></script>
+  <script src="js/buttons.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/articleController.js"></script>
+  <script src="js/sourceController.js"></script>
+  <script src="js/topicController.js"></script>
   <script src="home/home.js"></script>
   <script src="js/util.js"></script>
   <script src="about/about.js"></script>
@@ -103,6 +102,7 @@
       e.preventDefault;
       pushLeft.open();
     });
+
   </script>
 
 </body>
