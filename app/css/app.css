@@ -111,7 +111,7 @@ body {
 
 .popularity-1,
 .popularity-2 {
-  height: 200px;
+  height: 210px;
 }
 
 .popularity-3,
@@ -190,7 +190,7 @@ body {
   color: #bfbfbf;
   padding: 1em;
   font-weight: 300;
-  height: 40%;
+  height: 30%;
   overflow: hidden;
   visibility: hidden;
   opacity: 0;
