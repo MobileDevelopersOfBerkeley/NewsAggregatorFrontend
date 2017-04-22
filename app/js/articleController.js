@@ -7,8 +7,8 @@ controller('articleController', function($scope, $rootScope) {
         });
   });
 
-  $rootScope.updateArticles = function(sources) {
-    post(apiServerUrl + "getArticlesBySources", {"sources" : JSON.stringify(sources)}, function(articles) {
+  $rootScope.updateArticles = function(source_ids) {
+    post(apiServerUrl + "getArticlesBySources", {"sources" : JSON.stringify(source_ids)}, function(articles) {
       $scope.$apply(function() {
         $scope.articles = articles.slice(0, 30);
       });
