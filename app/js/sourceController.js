@@ -9,9 +9,9 @@ controller('sourceController', function($scope, $rootScope) {
 
   $scope.toggleSource = function(source_id) {
   	if (source_id in $rootScope.sources) {
-      delete $rootScope[source_id];
+      delete $rootScope.sources[source_id];
   	} else {
-  		$rootScope[source_id] = $scope.allSources;
+  		$rootScope.sources[source_id] = $scope.allSources[source_id];
   	}
     $rootScope.updateArticles(Object.keys($rootScope.sources));
   }
