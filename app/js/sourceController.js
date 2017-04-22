@@ -16,6 +16,6 @@ controller('sourceController', function($scope, $rootScope) {
 		    $scope.sources.splice(index, 1);
 		   }
   	}
-    $rootScope.updateArticles($scope.sources);
+    $rootScope.updateArticles(Object.keys($scope.sources));
 		}
 });
