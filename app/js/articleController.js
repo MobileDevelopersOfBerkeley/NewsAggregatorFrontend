@@ -1,16 +1,16 @@
 angular.module('myApp.controllers.articleController', []).
 controller('articleController', function($scope, $rootScope) {
-  post(apiServerUrl + "queryArticles", {},
+  post(apiServerUrl + "queryArticles", {"sanitize": true},
       function(articles) {
         $scope.$apply(function() {
-            $scope.articles = articles.slice(0, 30);
+            $scope.articles = articles;
         });
   });
 
   $rootScope.updateArticles = function(source_ids) {
-    post(apiServerUrl + "getArticlesBySources", {"sources" : JSON.stringify(source_ids)}, function(articles) {
+    post(apiServerUrl + "getArticlesBySources", {"sources" : JSON.stringify(source_ids), "sanitize": true}, function(articles) {
       $scope.$apply(function() {
-        $scope.articles = articles.slice(0, 30);
+        $scope.articles = articles;
       });
     });
   }
