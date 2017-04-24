@@ -1,6 +1,7 @@
 $(document).ready(function () {
     $('.tag-cloud').on('click', '#pill', function () {
-        $(this).toggleClass('pill-faded');
+        //$(this).toggleClass('pill-faded');
+        console.log('clicked');
     });
 
     $('.tag-cloud').on('mouseenter', '#pill', function () {

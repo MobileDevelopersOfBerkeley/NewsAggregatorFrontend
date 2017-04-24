@@ -45,7 +45,9 @@
     <div class="source-container" ng-controller="sourceController">
       <span class="filter-title">SOURCES</span>
       <ul class="tag-cloud" style="list-style:none;">
-        <li ng-repeat="source in allSources" id="pill" ng-click="toggleSource(source.id)"><span id="remove" class="hideRemoveBtn">&#10005;</span>{{source.name}}</li>
+        <li ng-repeat="source in allSources" id="pill" ng-click="toggleSource(source.id)"
+        ng-class="{'pill-faded': !sources.hasOwnProperty(source.id)}">
+          <span id="remove" class="hideRemoveBtn">&#10005;</span>{{source.name}}</li>
       </ul>
     </div>
 
